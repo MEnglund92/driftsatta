@@ -34,7 +34,6 @@ SoftwareDevopsTeam/
 |-----|-------------|
 | `app-repo/README.md` | API-dokumentation från utvecklingsteamet |
 | `infra-repo/docs/ASSIGNMENT.md` | Fullständig uppgiftsbeskrivning |
-| `infra-repo/docs/HINTS.md` | Ledtrådar (använd vid behov) |
 | `infra-repo/README.md` | Tekniska instruktioner |
 
 ## Rapportera buggar och föreslå förbättringar
