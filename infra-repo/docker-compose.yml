@@ -6,7 +6,7 @@ services:
     build: ./loadbalancer
     container_name: loadbalancer
     ports:
-      - "80:80"
+      - "8080:80"
     cap_add:
       - NET_ADMIN
     sysctls:
