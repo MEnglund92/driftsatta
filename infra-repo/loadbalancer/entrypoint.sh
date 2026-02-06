@@ -1,19 +1,12 @@
 #!/bin/sh
 
-# =============================================================
-# Startskript för lastbalanseraren
-# =============================================================
+# Aktivera IP-forwarding så att trafik kan skickas vidare genom containern
+echo 1 > /proc/sys/net/ipv4/ip_forward
 
-# TODO: Aktivera IP-forwarding
-# Tips: Skriv värdet 1 till /proc/sys/net/ipv4/ip_forward
-# echo ...
-
-# TODO: Ladda nftables-konfigurationen
-# Tips: Använd "nft -f" med sökvägen till konfigurationsfilen
-# nft ...
+# Ladda nftables-konfigurationen från filen
+nft -f /etc/nftables.conf
 
 echo "Lastbalanserare startad."
 
-# TODO: Håll containern igång
-# Tips: Containern avslutas om denna process avslutas.
-# Använd ett kommando som körs för evigt, t.ex. tail -f /dev/null
+# Håll containern igång (annars dör den direkt efter att reglerna laddats)
+tail -f /dev/null
