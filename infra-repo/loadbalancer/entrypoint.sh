@@ -1,9 +1,8 @@
 #!/bin/sh
 
-# Ladda nftables-konfigurationen från filen
+# Ladda nftables-reglerna
 nft -f /etc/nftables.conf
 
 echo "Lastbalanserare startad."
-
-# Håll containern igång (annars dör den direkt efter att reglerna laddats)
+# Håll processen vid liv
 tail -f /dev/null
